@@ -1,0 +1,12 @@
+*UI Handler*
+
+*Patterns*
+- Singleton
+
+*Description*
+This package handles the creation of the GUI.
+
+*Reason*
+Singleton will be used for loginComponents class to prevent multiple instances of the same class.
+
+

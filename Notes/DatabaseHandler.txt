@@ -1,0 +1,13 @@
+*Database Handler*
+
+*Pattern*
+- Strategies
+- DAO 
+
+*Description*
+This is a package that holds the code for handling database interactions
+
+*Reason*
+The strategy pattern allows an easy way to create another add class for when another database table is added, this makes sure principle open for extension and closed for modification is followed.
+
+

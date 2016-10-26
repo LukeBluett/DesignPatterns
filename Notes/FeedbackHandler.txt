@@ -1,0 +1,12 @@
+*Feedback Handler*
+
+*Patterns*
+- Observer
+
+*Descriptions*
+This package handles the information sent to the customers. It is generic and available for reuse under multiple scenarios
+
+*Reason*
+Needs to notify customers of changes. Doesn't break DRY principle
+
+

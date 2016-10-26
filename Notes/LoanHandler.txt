@@ -1,0 +1,7 @@
+*Loan Handler*
+
+*Patterns*
+- Decorator
+
+*Description*
+This Package handles the loans system
