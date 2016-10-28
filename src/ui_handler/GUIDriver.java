@@ -7,5 +7,6 @@
 public class GUIDriver {
 	public static void main(String[] args) {
 		GUILogInComponents.getInstance();
+		GUILogInComponents.setFrameVisible();
 	}
 }

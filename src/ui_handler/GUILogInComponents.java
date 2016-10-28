@@ -9,21 +9,18 @@ import javax.swing.*;
 */
 
 public class GUILogInComponents {
-	private JFrame frameLogIn;
-	private JPanel panelMain, panelUsername, panelPassword, panelButtons;
-	private JLabel labelUsername, labelPassword;
-	private JTextField textFieldUsername, textFieldPassword;
-	private JButton buttonLogIn, buttonCancel;
+	private static JFrame frameLogIn;
+	private static JPanel panelInfo, panelMain, panelUsername, panelPassword, panelButtons;
+	private static JLabel labelInfo, labelUsername, labelPassword;
+	private static JTextField textFieldUsername, textFieldPassword;
+	private static JButton buttonLogIn, buttonCancel;
 
-	private LogInController logInController = new LogInController();
 	private FlowLayout flow = new FlowLayout();
 	private static GUILogInComponents gui = new GUILogInComponents();
 
 	private GUILogInComponents() {
 		createComponents();
 		addComponents();
-		logInController.addListeners();
-		setFrameVisible();
 	}
 
 	public static GUILogInComponents getInstance() {
@@ -35,9 +32,11 @@ public class GUILogInComponents {
 		panelMain 		= new JPanel();
 		panelMain.setLayout(new BoxLayout(panelMain, BoxLayout.Y_AXIS));
 
+		panelInfo		= new JPanel(flow);
 		panelUsername 		= new JPanel(flow);
 		panelPassword 		= new JPanel(flow);
 		panelButtons 		= new JPanel(flow);
+		labelInfo		= new JLabel("Please enter a valid username and password");
 		labelUsername 		= new JLabel("Username: ");
 		labelPassword		= new JLabel("Password: ");
 		textFieldUsername 	= new JTextField(15);
@@ -47,20 +46,28 @@ public class GUILogInComponents {
 	}
 
 	private void addComponents() {
-		panelUsername.add(labelUsername);
-		panelUsername.add(textFieldUsername);
-		panelPassword.add(labelPassword);
-		panelPassword.add(textFieldPassword);
-		panelButtons.add(buttonLogIn);
-		panelButtons.add(buttonCancel);
-		panelMain.add(panelUsername);
-		panelMain.add(panelPassword);
-		panelMain.add(panelButtons);
-		frameLogIn.add(panelMain);
+		panelInfo	.add(labelInfo);
+		panelUsername	.add(labelUsername);
+		panelUsername	.add(textFieldUsername);
+		panelPassword	.add(labelPassword);
+		panelPassword	.add(textFieldPassword);
+		panelButtons	.add(buttonLogIn);
+		panelButtons	.add(buttonCancel);
+		panelMain	.add(panelInfo);
+		panelMain	.add(panelUsername);
+		panelMain	.add(panelPassword);
+		panelMain	.add(panelButtons);
+		frameLogIn	.add(panelMain);
 	}
 
-	private void setFrameVisible() {
-		frameLogIn.setSize(300,200);
+	public static void setFrameVisible() {
+		frameLogIn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameLogIn.setSize(350,200);
 		frameLogIn.setVisible(true);
+	}
+
+	public static void closeFrame() {
+		frameLogIn.setVisible(false);
+		frameLogIn.dispose();
 	}
 }
