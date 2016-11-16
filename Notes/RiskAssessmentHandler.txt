@@ -1,0 +1,12 @@
+*RiskAssessment Handler*
+
+*Pattern*
+- Decorator
+- Bridge (part)
+
+*Description*
+This is a package that holds the code for handling the assessing of a customer risk, when it comes to them making a loan
+
+*Reason*
+The Decorator pattern allows functionality to be added dynamically, the functionality that needs to be added dynamcally is things like are they a student has the customer had a loan before, etc... 
+The bridge pattern decouples abstractions from their concrete implementations, only part of the bridge pattern is in the RiskAssessmentHandler the other part is in the LoanHandler. Bridge decouples the elements that calculate the risk value. 
