@@ -14,6 +14,7 @@ public class GUILogInComponents {
 	private static JLabel labelInfo, labelUsername, labelPassword;
 	private static JTextField textFieldUsername, textFieldPassword;
 	private static JButton buttonLogIn, buttonCancel;
+	private static ControllerGUI loginControls;
 
 	private FlowLayout flow = new FlowLayout();
 	private static GUILogInComponents gui = new GUILogInComponents();
@@ -21,6 +22,7 @@ public class GUILogInComponents {
 	private GUILogInComponents() {
 		createComponents();
 		addComponents();
+		addActionListener();
 	}
 
 	public static GUILogInComponents getInstance() {
@@ -69,5 +71,18 @@ public class GUILogInComponents {
 	public static void closeFrame() {
 		frameLogIn.setVisible(false);
 		frameLogIn.dispose();
+	}
+
+	public static JButton getButtonLogin() {
+		return buttonLogIn;
+	}
+
+	public static JButton getButtonCancel() {
+		return buttonCancel;
+	}
+
+	public static void addActionListeners() {
+		loginControls = new ControllerLogIn();
+		loginControls.addListeners();
 	}
 }

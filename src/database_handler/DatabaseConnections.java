@@ -6,7 +6,7 @@ package database_handler;
 
 */
 
-public interface DatabaseCommands {
+public interface DatabaseConnections {
 	public void connectToDatabase();
 	public void closeDatabase();
 }

@@ -1,3 +1,4 @@
+// package loan_handler;
 /*
 	This java class handles the starting up of the application and the 
 	interactions between different packages 
@@ -6,29 +7,10 @@
 public class LoanDriver {
 	public static void main(String[] args) {
 		//StartGUI
-		//AddactionListeners to login
 	}
 
 	public static void loginStart() {
 		//get the single instance of the Login Gui
-		//and set visible
-	}
-
-	public static void loginAddActionListeners() {
-		//add action listeners to all buttons in the login gui
-	}
-
-	public static void mainGuiStart() {
-		//get the single instance of the Login Gui
-		//and set Visible
-	}
-
-	public static void mainGuiAddActionListeners() {
-		//add action listeners to all buttons in the main gui
-	}
-
-	public static String getTextFromTextfield(JTextField textfield) {
-		return textfield.getText();
 	}
 
 	public static DAO getDatabaseObject(DAO dao) {

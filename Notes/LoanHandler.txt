@@ -2,6 +2,7 @@
 
 *Patterns*
 - Decorator
+- Bridge (part)
 
 *Description*
 This Package handles the loans system
